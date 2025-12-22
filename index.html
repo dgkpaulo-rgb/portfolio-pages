@@ -4,177 +4,215 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio de Landing Pages | Paulo Henrique</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <title>NeonCut Studio | Design Gráfico & Sites de Alta Performance</title>
+    <meta name="description"
+        content="Eleve seu nível visual com NeonCut. Especialistas em Logos, Social Media, Motion Design e Landing Pages de Alta Conversão.">
+
+    <!-- Google Fonts: Space Grotesk & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root {
-            --primary: #6366f1;
-            --bg: #0f172a;
-            --card-bg: #1e293b;
-            --text: #f8fafc;
-        }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            min-height: 100vh;
-            padding: 60px 20px;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 80px;
-        }
-
-        h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
-            font-weight: 900;
-        }
-
-        p.subtitle {
-            font-size: 18px;
-            color: #94a3b8;
-        }
-
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-        }
-
-        .portfolio-card {
-            background: var(--card-bg);
-            border-radius: 20px;
-            overflow: hidden;
-            transition: 0.4s;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .portfolio-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        }
-
-        .card-img {
-            height: 200px;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-
-        .card-content {
-            padding: 30px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .card-content h2 {
-            margin-bottom: 15px;
-            font-size: 24px;
-        }
-
-        .card-content p {
-            color: #94a3b8;
-            margin-bottom: 25px;
-            line-height: 1.6;
-        }
-
-        .btn-view {
-            margin-top: auto;
-            background: var(--primary);
-            color: white;
-            text-decoration: none;
-            padding: 12px 25px;
-            border-radius: 10px;
-            text-align: center;
-            font-weight: 700;
-            transition: 0.3s;
-        }
-
-        .btn-view:hover {
-            opacity: 0.9;
-        }
-
-        /* Custom Colors for Cards */
-        .card-lawyer {
-            border-top: 5px solid #C5A059;
-        }
-
-        .card-burger {
-            border-top: 5px solid #ff6600;
-        }
-
-        .card-barber {
-            border-top: 5px solid #ffdb58;
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 32px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <h1>Portfolio de Landing Pages</h1>
-            <p class="subtitle">Três estilos diferentes para três nichos de mercado.</p>
-        </header>
+    <header>
+        <div class="container">
+            <div class="logo-wrapper">
+                <img src="logo.png" alt="NeonCut Logo" class="logo-img">
+                <div class="logo-text">NEON<span>CUT</span></div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#portfolio">Portfólio</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </nav>
+            <a href="https://wa.me/5511978396684" class="btn-neon">Iniciar Projeto</a>
+        </div>
+    </header>
 
-        <div class="portfolio-grid">
-            <!-- Lawyer -->
-            <div class="portfolio-card card-lawyer">
-                <div class="card-img" style="background-image: url('mendes-associados/hero.png');"></div>
-                <div class="card-content">
-                    <h2>Mendes & Associados</h2>
-                    <p>Landing page corporativa para advocacia. Foco em autoridade, sobriedade e credibilidade com cores
-                        azul marinho e dourado.</p>
-                    <a href="mendes-associados/index.html" class="btn-view">Ver Site</a>
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="badge">Especialista em Impacto Visual</span>
+                <h1>Transformamos ideias em <span class="highlight">Resultados Reais.</span></h1>
+                <p>Do design de marcas à criação de sites que vendem. O NeonCut une estética premium com tecnologia para
+                    fazer sua marca se destacar.</p>
+                <div class="hero-btns">
+                    <a href="#portfolio" class="btn-main">Conhecer Projetos</a>
+                    <a href="#orcamento" class="btn-outline">Solicitar Orçamento</a>
                 </div>
             </div>
-
-            <!-- Burger -->
-            <div class="portfolio-card card-burger">
-                <div class="card-img" style="background-image: url('brasa-burger/hero.png');"></div>
-                <div class="card-content">
-                    <h2>Brasa Burger 99</h2>
-                    <p>Site vibrante em Dark Mode para hamburgueria artesanal. Visual impactante que foca na conversão e
-                        no desejo gastronômico.</p>
-                    <a href="brasa-burger/index.html" class="btn-view">Ver Site</a>
-                </div>
-            </div>
-
-            <!-- Barber -->
-            <div class="portfolio-card card-barber">
-                <div class="card-img" style="background-image: url('navalha-club/hero.png');"></div>
-                <div class="card-content">
-                    <h2>Navalha Club</h2>
-                    <p>Estetica industrial e retrô para barbearia moderna. Site One-Page com foco no estilo de vida e
-                        agendamento rápido.</p>
-                    <a href="navalha-club/index.html" class="btn-view">Ver Site</a>
+            <div class="hero-image">
+                <img src="hero.png" alt="NeonCut Studio Workspace">
+                <div class="floating-icons">
+                    <div class="icon-box ps"><i class="fab fa-instagram"></i></div>
+                    <div class="icon-box ai"><i class="fab fa-tiktok"></i></div>
+                    <div class="icon-box pr"><i class="fab fa-adobe"></i></div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <section id="servicos" class="services">
+        <div class="container">
+            <h2 class="section-title">Soluções Criativas</h2>
+            <p class="section-subtitle">Tudo o que você precisa para dominar o digital.</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-desktop"></i>
+                    <h3>Landing Pages</h3>
+                    <p>Sites focados em conversão, rápidos e otimizados para atrair clientes.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-layer-group"></i>
+                    <h3>Identidade Visual</h3>
+                    <p>Criação de logos e sistemas visuais que transmitem autoridade.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-play-circle"></i>
+                    <h3>Motion & Vídeo</h3>
+                    <p>Edição de vídeos e animações para Reels, TikTok e YouTube.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Social Media</h3>
+                    <p>Design estratégico para suas redes sociais crescerem organicamente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Portfolio (Nossos Cases) -->
+    <section id="portfolio" class="main-portfolio">
+        <div class="container">
+            <h2 class="section-title">Portfólio de Sites</h2>
+            <p class="section-subtitle">Exemplos de landing pages desenvolvidas para diferentes nichos.</p>
+
+            <div class="portfolio-grid">
+                <!-- Burger -->
+                <div class="portfolio-card">
+                    <div class="card-img" style="background-image: url('brasa-burger/hero.png');"></div>
+                    <div class="card-content">
+                        <h2>Brasa Burger 99</h2>
+                        <p>Visual impactante em Dark Mode focado em delivery e gastronomia artesanal.</p>
+                        <a href="brasa-burger/index.html" class="btn-view-project">Explorar Site</a>
+                    </div>
+                </div>
+
+                <!-- Lawyer -->
+                <div class="portfolio-card">
+                    <div class="card-img" style="background-image: url('mendes-associados/hero.png');"></div>
+                    <div class="card-content">
+                        <h2>Mendes & Associados</h2>
+                        <p>Design sóbrio e elegante para advocacia, focado em autoridade e confiança.</p>
+                        <a href="mendes-associados/index.html" class="btn-view-project">Explorar Site</a>
+                    </div>
+                </div>
+
+                <!-- Barber -->
+                <div class="portfolio-card">
+                    <div class="card-img" style="background-image: url('navalha-club/hero.png');"></div>
+                    <div class="card-content">
+                        <h2>Navalha Club</h2>
+                        <p>Estilo industrial e retrô para barbearia, otimizado para agendamentos rápidos.</p>
+                        <a href="navalha-club/index.html" class="btn-view-project">Explorar Site</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Dúvidas Frequentes</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>Quais são os prazos médios?</h3>
+                    <p>Para designs e logos, entre 3 a 5 dias. Para landing pages completas, de 10 a 15 dias úteis.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Como recebo meus arquivos?</h3>
+                    <p>Todos os arquivos finais são entregues em alta qualidade e nos formatos necessários (PNG, SVG,
+                        PDF, etc).</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Vocês cuidam da hospedagem do site?</h3>
+                    <p>Sim, orientamos em todo o processo ou podemos gerenciar a hospedagem por você.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>O atendimento é via WhatsApp?</h3>
+                    <p>Sim, mantemos um canal direto e rápido via WhatsApp para suporte e aprovações durante todo o
+                        projeto.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Budget Form -->
+    <section id="orcamento" class="budget">
+        <div class="container">
+            <div class="budget-wrapper">
+                <div class="budget-text">
+                    <h2>Fale com um Especialista</h2>
+                    <p>Explique seu projeto e receba uma proposta personalizada hoje mesmo.</p>
+                    <div class="direct-contact">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>11 97839-6684</span>
+                    </div>
+                </div>
+                <form class="budget-form" action="#">
+                    <div class="form-group">
+                        <input type="text" placeholder="Nome / Empresa" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="E-mail" required>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="" disabled selected>Tipo de Projeto</option>
+                            <option value="site">Landing Page / Site</option>
+                            <option value="visual">Identidade Visual</option>
+                            <option value="video">Edição de Vídeo</option>
+                            <option value="social">Gestão de Social Media</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Fale brevemente sobre o que você precisa..." rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Enviar Proposta <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 NeonCut Studio. Paulo Henrique - Diretor Criativo.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-behance"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/5511978396684" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 </body>
 
 </html>
