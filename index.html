@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio de Landing Pages | Paulo Henrique</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --text: #f8fafc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            padding: 60px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            font-weight: 900;
+        }
+
+        p.subtitle {
+            font-size: 18px;
+            color: #94a3b8;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .portfolio-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: 0.4s;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-img {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .card-content {
+            padding: 30px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-content h2 {
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+
+        .card-content p {
+            color: #94a3b8;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .btn-view {
+            margin-top: auto;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .btn-view:hover {
+            opacity: 0.9;
+        }
+
+        /* Custom Colors for Cards */
+        .card-lawyer {
+            border-top: 5px solid #C5A059;
+        }
+
+        .card-burger {
+            border-top: 5px solid #ff6600;
+        }
+
+        .card-barber {
+            border-top: 5px solid #ffdb58;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Portfolio de Landing Pages</h1>
+            <p class="subtitle">Três estilos diferentes para três nichos de mercado.</p>
+        </header>
+
+        <div class="portfolio-grid">
+            <!-- Lawyer -->
+            <div class="portfolio-card card-lawyer">
+                <div class="card-img" style="background-image: url('mendes-associados/hero.png');"></div>
+                <div class="card-content">
+                    <h2>Mendes & Associados</h2>
+                    <p>Landing page corporativa para advocacia. Foco em autoridade, sobriedade e credibilidade com cores
+                        azul marinho e dourado.</p>
+                    <a href="mendes-associados/index.html" class="btn-view">Ver Site</a>
+                </div>
+            </div>
+
+            <!-- Burger -->
+            <div class="portfolio-card card-burger">
+                <div class="card-img" style="background-image: url('brasa-burger/hero.png');"></div>
+                <div class="card-content">
+                    <h2>Brasa Burger 99</h2>
+                    <p>Site vibrante em Dark Mode para hamburgueria artesanal. Visual impactante que foca na conversão e
+                        no desejo gastronômico.</p>
+                    <a href="brasa-burger/index.html" class="btn-view">Ver Site</a>
+                </div>
+            </div>
+
+            <!-- Barber -->
+            <div class="portfolio-card card-barber">
+                <div class="card-img" style="background-image: url('navalha-club/hero.png');"></div>
+                <div class="card-content">
+                    <h2>Navalha Club</h2>
+                    <p>Estetica industrial e retrô para barbearia moderna. Site One-Page com foco no estilo de vida e
+                        agendamento rápido.</p>
+                    <a href="navalha-club/index.html" class="btn-view">Ver Site</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
