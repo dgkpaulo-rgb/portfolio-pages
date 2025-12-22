@@ -200,6 +200,20 @@ nav ul li a:hover {
 .hero-image {
     flex: 1;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image::before {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    background: var(--neon-cyan);
+    filter: blur(100px);
+    opacity: 0.15;
+    z-index: 0;
 }
 
 .hero-image img {
@@ -207,6 +221,10 @@ nav ul li a:hover {
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1;
+    -webkit-mask-image: radial-gradient(circle, black 60%, transparent 100%);
+    mask-image: radial-gradient(circle, black 60%, transparent 100%);
 }
 
 .floating-icons {
