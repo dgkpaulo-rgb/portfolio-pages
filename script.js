@@ -111,6 +111,28 @@ projectCards.forEach(card => {
 });
 
 // ==========================================
+// MOBILE HAMBURGER MENU
+// ==========================================
+const hamburger = document.querySelector('.hamburger');
+const body = document.body;
+
+if (hamburger) {
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        body.classList.toggle('mobile-menu-active');
+    });
+
+    // Close menu when clicking on navigation links
+    const navLinks = document.querySelectorAll('nav ul li a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            body.classList.remove('mobile-menu-active');
+        });
+    });
+}
+
+// ==========================================
 // CURSOR TRAIL EFFECT (OPTIONAL)
 // ==========================================
 const createCursorTrail = () => {

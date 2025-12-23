@@ -541,6 +541,43 @@ footer {
     transform: scale(1.1);
 }
 
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--text-white);
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Mobile Navigation Overlay */
+.mobile-menu-active nav {
+    display: flex !important;
+}
+
 /* Responsive */
 @media (max-width: 992px) {
 
@@ -562,18 +599,255 @@ footer {
         justify-content: center;
     }
 
+    .hamburger {
+        display: flex;
+    }
+
     nav {
         display: none;
+        position: fixed;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: rgba(5, 5, 5, 0.98);
+        backdrop-filter: blur(20px);
+        padding: 30px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+        padding: 10px 20px;
+        display: block;
+    }
+
+    .btn-neon {
+        font-size: 13px;
+        padding: 8px 16px;
     }
 
     .footer-bottom {
         flex-direction: column;
         gap: 20px;
     }
+
+    .services {
+        padding: 60px 0;
+    }
+
+    .main-portfolio,
+    .budget {
+        padding: 60px 0;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .hero {
+        padding: 120px 0 60px;
+    }
+
+    .hero .container {
+        gap: 40px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    .badge {
+        font-size: 12px;
+        padding: 4px 12px;
+    }
+
+    .hero-btns {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .btn-main,
+    .btn-outline {
+        width: 100%;
+        text-align: center;
+        padding: 14px 30px;
+    }
+
+    .hero-image {
+        max-width: 400px;
+    }
+
+    .floating-icons {
+        display: none;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .section-subtitle {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .service-card {
+        padding: 30px;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .faq-section {
+        padding: 60px 0;
+    }
+
     .faq-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .budget-text h2 {
+        font-size: 32px;
+    }
+
+    .budget-text p {
+        font-size: 16px;
+    }
+
+    .direct-contact {
+        font-size: 18px;
+        justify-content: center;
+    }
+
+    .budget-form {
+        padding: 30px 25px;
+    }
+
+    footer {
+        padding: 40px 0;
+        text-align: center;
+    }
+
+    .footer-bottom p {
+        font-size: 14px;
+    }
+
+    .whatsapp-float {
+        width: 55px;
+        height: 55px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-img {
+        height: 35px;
+    }
+
+    .logo-text {
+        font-size: 18px;
+    }
+
+    .btn-neon {
+        font-size: 12px;
+        padding: 7px 12px;
+    }
+
+    .hero {
+        padding: 100px 0 50px;
+    }
+
+    .hero-content h1 {
+        font-size: 26px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .btn-main,
+    .btn-outline {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .section-subtitle {
+        font-size: 14px;
+    }
+
+    .service-card {
+        padding: 25px 20px;
+    }
+
+    .service-card h3 {
+        font-size: 20px;
+    }
+
+    .budget-text h2 {
+        font-size: 26px;
+    }
+
+    .budget-form {
+        padding: 25px 20px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .btn-submit {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 15px;
+        right: 15px;
+        font-size: 24px;
+    }
+
+    footer {
+        padding: 30px 0;
     }
 }
