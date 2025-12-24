@@ -133,25 +133,54 @@
     <section id="faq" class="faq-section">
         <div class="container">
             <h2 class="section-title">Perguntas Frequentes</h2>
-            <div class="faq-grid">
+            <div class="faq-accordion">
                 <div class="faq-item">
-                    <h3>Qual o prazo para entrega de um logo?</h3>
-                    <p>Em média, entregamos a primeira versão em 3 a 5 dias úteis, garantindo qualidade e exclusividade.
-                    </p>
+                    <button class="faq-question">
+                        <span>Qual o prazo para entrega de um logo?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            <p>Em média, entregamos a primeira versão em 3 a 5 dias úteis, garantindo qualidade e
+                                exclusividade.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="faq-item">
-                    <h3>Vocês fazem a gestão de redes sociais?</h3>
-                    <p>Sim! Criamos o design das artes e também oferecemos pacotes para legendas e agendamento de posts.
-                    </p>
+                    <button class="faq-question">
+                        <span>Vocês fazem a gestão de redes sociais?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            <p>Sim! Criamos o design das artes e também oferecemos pacotes para legendas e agendamento
+                                de posts.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="faq-item">
-                    <h3>O site já vem pronto para celular?</h3>
-                    <p>Com certeza. Todos os nossos sites são 100% responsivos e otimizados para smartphones.</p>
+                    <button class="faq-question">
+                        <span>O site já vem pronto para celular?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            <p>Com certeza. Todos os nossos sites são 100% responsivos e otimizados para smartphones.
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 <div class="faq-item">
-                    <h3>Como funciona o pagamento?</h3>
-                    <p>Trabalhamos com 50% de sinal para início do projeto e 50% na entrega final, via PIX ou Cartão.
-                    </p>
+                    <button class="faq-question">
+                        <span>Como funciona o pagamento?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            <p>Trabalhamos com 50% de sinal para início do projeto e 50% na entrega final, via PIX ou
+                                Cartão.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -195,15 +224,42 @@
         </div>
     </section>
 
-    <footer>
+    <footer class="main-footer">
         <div class="container">
-            <div class="footer-bottom">
-                <p>&copy; 2025 NeonCut Studio. Criando o futuro visual.</p>
-                <div class="footer-social">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-behance"></i></a>
-                    <a href="#"><i class="fab fa-dribbble"></i></a>
+            <div class="footer-grid">
+                <!-- Brand -->
+                <div class="footer-col brand">
+                    <div class="logo">NEON<span>CUT</span></div>
+                    <p>Transformando visões em realidade digital com design de alta performance.</p>
                 </div>
+
+                <!-- Info -->
+                <div class="footer-col info">
+                    <h4>Informações</h4>
+                    <ul>
+                        <li>CNPJ: 33.273.633/0001-22</li>
+                        <li>São Paulo - Brasil</li>
+                        <li><i class="fas fa-bolt"></i> Entrega Rápida</li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-col contact">
+                    <h4>Contato Oficial</h4>
+                    <a href="mailto:contato@neoncut.com.br" class="footer-link">
+                        <i class="fas fa-envelope"></i> contato@neoncut.com.br
+                    </a>
+                    <a href="https://wa.me/5511978396684" class="footer-link">
+                        <i class="fab fa-whatsapp"></i> +55 (11) 97839-6684
+                    </a>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-behance"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copy">
+                <p>&copy; 2025 NeonCut Studio. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
@@ -212,6 +268,26 @@
     <a href="https://wa.me/5511978396684" class="whatsapp-float">
         <i class="fab fa-whatsapp"></i>
     </a>
+
+    <script>
+        // Accordion Logic
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const isOpen = faqItem.classList.contains('active');
+
+                // Close all other items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+
+                // Toggle current item
+                if (!isOpen) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

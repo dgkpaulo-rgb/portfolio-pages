@@ -141,24 +141,53 @@
     <section id="faq" class="faq-section">
         <div class="container">
             <h2 class="section-title">Dúvidas Frequentes</h2>
-            <div class="faq-grid">
+            <div class="faq-accordion">
                 <div class="faq-item">
-                    <h3>Quais são os prazos médios?</h3>
-                    <p>Para designs e logos, entre 3 a 5 dias. Para landing pages completas, de 10 a 15 dias úteis.</p>
+                    <button class="faq-question">
+                        <span>Quais são os prazos médios?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            <p>Para designs e logos, entre 3 a 5 dias. Para landing pages completas, de 10 a 15 dias
+                                úteis.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="faq-item">
-                    <h3>Como recebo meus arquivos?</h3>
-                    <p>Todos os arquivos finais são entregues em alta qualidade e nos formatos necessários (PNG, SVG,
-                        PDF, etc).</p>
+                    <button class="faq-question">
+                        <span>Como recebo meus arquivos?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            <p>Todos os arquivos finais são entregues em alta qualidade e nos formatos necessários (PNG,
+                                SVG, PDF, etc).</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="faq-item">
-                    <h3>Vocês cuidam da hospedagem do site?</h3>
-                    <p>Sim, orientamos em todo o processo ou podemos gerenciar a hospedagem por você.</p>
+                    <button class="faq-question">
+                        <span>Vocês cuidam da hospedagem do site?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            <p>Sim, orientamos em todo o processo ou podemos gerenciar a hospedagem por você.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="faq-item">
-                    <h3>O atendimento é via WhatsApp?</h3>
-                    <p>Sim, mantemos um canal direto e rápido via WhatsApp para suporte e aprovações durante todo o
-                        projeto.</p>
+                    <button class="faq-question">
+                        <span>O atendimento é via WhatsApp?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            <p>Sim, mantemos um canal direto e rápido via WhatsApp para suporte e aprovações durante
+                                todo o projeto.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -201,15 +230,46 @@
         </div>
     </section>
 
-    <footer>
+    <footer class="main-footer">
         <div class="container">
-            <div class="footer-bottom">
-                <p>&copy; 2025 NeonCut Studio. Paulo Henrique - Diretor Criativo.</p>
-                <div class="footer-social">
-                    <a href="https://instagram.com/neoncut.studio" target="_blank" rel="noopener"><i
-                            class="fab fa-instagram"></i></a>
-                    <a href="https://wa.me/5511978396684" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <div class="footer-grid">
+                <!-- Brand -->
+                <div class="footer-col brand">
+                    <div class="logo-wrapper">
+                        <img src="logo.png" alt="NeonCut Logo" class="logo-img">
+                        <div class="logo-text">NEON<span>CUT</span></div>
+                    </div>
+                    <p>Transformando visões em realidade digital com design de alta performance.</p>
                 </div>
+
+                <!-- Info -->
+                <div class="footer-col info">
+                    <h4>Agência Oficial</h4>
+                    <ul>
+                        <li><i class="fas fa-fingerprint"></i> CNPJ: 33.273.633/0001-22</li>
+                        <li><i class="fas fa-map-marker-alt"></i> São Paulo - Brasil</li>
+                        <li><i class="fas fa-bolt"></i> Suporte Prioritário</li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-col contact">
+                    <h4>Contato</h4>
+                    <a href="mailto:contato@neoncut.com.br" class="footer-link">
+                        <i class="fas fa-envelope"></i> contato@neoncut.com.br
+                    </a>
+                    <a href="https://wa.me/5511978396684" target="_blank" class="footer-link">
+                        <i class="fab fa-whatsapp"></i> +55 (11) 97839-6684
+                    </a>
+                    <div class="footer-social">
+                        <a href="https://instagram.com/neoncut.studio" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-behance"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copy">
+                <p>&copy; 2025 NeonCut Studio. Paulo Henrique - Diretor Criativo.</p>
             </div>
         </div>
     </footer>
@@ -224,7 +284,32 @@
         <i class="fab fa-instagram"></i>
     </a>
 
-    <script src="script.js"></script>
+    <script>
+        // Hamburger Menu
+        const hamburger = document.querySelector('.hamburger');
+        const body = document.querySelector('body');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            body.classList.toggle('mobile-menu-active');
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const isOpen = faqItem.classList.contains('active');
+
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+
+                if (!isOpen) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
