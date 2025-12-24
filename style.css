@@ -494,21 +494,24 @@ nav ul li a:hover {
 .direct-contact {
     display: inline-flex;
     align-items: center;
-    gap: 15px;
-    padding: 15px 25px;
-    background: rgba(37, 211, 102, 0.1);
-    border: 1px solid rgba(37, 211, 102, 0.2);
+    gap: 12px;
+    padding: 18px 30px;
+    background: #25d366;
+    border: none;
     border-radius: 50px;
-    font-size: 20px;
-    font-weight: 700;
-    color: #25d366;
-    transition: 0.3s;
+    font-size: 18px;
+    font-weight: 800;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 20px rgba(37, 211, 102, 0.15);
 }
 
 .direct-contact:hover {
-    background: rgba(37, 211, 102, 0.2);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.2);
+    background: #20ba59;
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(37, 211, 102, 0.3);
+    color: white;
 }
 
 .budget-form {
