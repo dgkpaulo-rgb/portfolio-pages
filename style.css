@@ -805,13 +805,32 @@ nav ul li a:hover {
 @media (max-width: 992px) {
 
     .hero .container,
-    .budget-wrapper {
+    .budget-wrapper,
+    .footer-grid {
         flex-direction: column;
         text-align: center;
     }
 
-    .budget-wrapper {
+    .budget-wrapper,
+    .footer-grid {
         grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        gap: 50px;
+    }
+
+    .footer-col.brand p {
+        margin: 0 auto;
+    }
+
+    .footer-col ul li {
+        justify-content: center;
+    }
+
+    .footer-link,
+    .footer-social {
+        justify-content: center;
     }
 
     .hero-content h1 {
