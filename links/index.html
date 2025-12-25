@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links Oficiais | NeonCut Studio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #050505;
+            --primary-neon: #00f2ff;
+            --secondary-neon: #0066ff;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            user-select: none;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(0, 242, 255, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(0, 102, 255, 0.05) 0%, transparent 40%);
+            color: white;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .profile-section {
+            text-align: center;
+            margin-bottom: 40px;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        .logo-container {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            position: relative;
+        }
+
+        .logo-img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 15px rgba(0, 242, 255, 0.6));
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        h1 span {
+            color: var(--primary-neon);
+        }
+
+        .tagline {
+            color: #888;
+            font-size: 0.9rem;
+            font-weight: 300;
+        }
+
+        .links-container {
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .link-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            padding: 18px 24px;
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation: fadeInUp 0.5s ease-out backwards;
+        }
+
+        .link-card:hover {
+            transform: scale(1.03);
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--primary-neon);
+            box-shadow: 0 0 20px rgba(0, 242, 255, 0.15);
+        }
+
+        .link-content {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .link-content i {
+            font-size: 20px;
+            color: var(--primary-neon);
+            width: 25px;
+            text-align: center;
+        }
+
+        .link-text h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .link-text p {
+            font-size: 0.75rem;
+            color: #aaa;
+        }
+
+        .chevron {
+            font-size: 12px;
+            color: #555;
+            transition: transform 0.3s;
+        }
+
+        .link-card:hover .chevron {
+            color: var(--primary-neon);
+            transform: translateX(5px);
+        }
+
+        /* Special High-Conversion Link */
+        .link-card.featured {
+            background: linear-gradient(135deg, rgba(0, 242, 255, 0.1), rgba(0, 102, 255, 0.1));
+            border-color: rgba(0, 242, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .link-card.featured::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+            transform: rotate(45deg);
+            transition: 0.5s;
+            animation: shimmer 3s infinite;
+        }
+
+        .footer {
+            margin-top: auto;
+            padding-top: 50px;
+            text-align: center;
+            color: #444;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                transform: translateX(-150%) rotate(45deg);
+            }
+
+            100% {
+                transform: translateX(150%) rotate(45deg);
+            }
+        }
+
+        /* Staggered delay for links */
+        .links-container a:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .links-container a:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        .links-container a:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        .links-container a:nth-child(4) {
+            animation-delay: 0.5s;
+        }
+
+        .links-container a:nth-child(5) {
+            animation-delay: 0.6s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="profile-section">
+        <div class="logo-container">
+            <img src="../assets/logo_neon.png" alt="NeonCut Logo" class="logo-img">
+        </div>
+        <h1>NEON<span>CUT</span></h1>
+        <p class="tagline">Creative Digital Assets Agency</p>
+    </div>
+
+    <nav class="links-container">
+        <!-- Site Oficial -->
+        <a href="https://neoncut.com.br" class="link-card featured">
+            <div class="link-content">
+                <i class="fas fa-globe"></i>
+                <div class="link-text">
+                    <h3>Site Oficial</h3>
+                    <p>Conheça nossa agência e todos os serviços</p>
+                </div>
+            </div>
+            <i class="fas fa-chevron-right chevron"></i>
+        </a>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/5511978396684?text=Olá!%20Vim%20pelo%20Instagram%20e%20gostaria%20de%20fazer%20um%20orçamento."
+            class="link-card">
+            <div class="link-content">
+                <i class="fab fa-whatsapp"></i>
+                <div class="link-text">
+                    <h3>Orçamento Imediato</h3>
+                    <p>Fale diretamente com um especialista</p>
+                </div>
+            </div>
+            <i class="fas fa-chevron-right chevron"></i>
+        </a>
+
+        <!-- Portfólio -->
+        <a href="https://neoncut.com.br#portfolio" class="link-card">
+            <div class="link-content">
+                <i class="fas fa-play-circle"></i>
+                <div class="link-text">
+                    <h3>Portfólio de Vídeos</h3>
+                    <p>Veja nossos melhores projetos de edição</p>
+                </div>
+            </div>
+            <i class="fas fa-chevron-right chevron"></i>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://instagram.com/neoncut.studio" target="_blank" class="link-card">
+            <div class="link-content">
+                <i class="fab fa-instagram"></i>
+                <div class="link-text">
+                    <h3>Follow us on Instagram</h3>
+                    <p>Dicas de design e bastidores da agência</p>
+                </div>
+            </div>
+            <i class="fas fa-chevron-right chevron"></i>
+        </a>
+
+        <!-- Email -->
+        <a href="mailto:contato@neoncut.com.br" class="link-card">
+            <div class="link-content">
+                <i class="fas fa-envelope"></i>
+                <div class="link-text">
+                    <h3>E-mail Oficial</h3>
+                    <p>Envie sua proposta ou arquivos</p>
+                </div>
+            </div>
+            <i class="fas fa-chevron-right chevron"></i>
+        </a>
+    </nav>
+
+    <footer class="footer">
+        © 2025 NeonCut Digital Assets
+    </footer>
+
+</body>
+
+</html>
