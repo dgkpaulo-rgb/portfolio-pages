@@ -101,36 +101,91 @@
     <!-- Main Portfolio (Nossos Cases) -->
     <section id="portfolio" class="main-portfolio">
         <div class="container">
-            <h2 class="section-title">Portfólio de Sites</h2>
-            <p class="section-subtitle">Exemplos de landing pages desenvolvidas para diferentes nichos.</p>
+            <h2 class="section-title">Nossos Projetos</h2>
+            <p class="section-subtitle">Soluções digitais que geram impacto e conversão.</p>
+
+            <!-- Portfolio Filters -->
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="site">Sites & LPs</button>
+                <button class="filter-btn" data-filter="reels">Reels & Shorts</button>
+                <button class="filter-btn" data-filter="youtube">YouTube Edits</button>
+            </div>
 
             <div class="portfolio-grid">
+                <!-- Video: Reels 1 -->
+                <div class="portfolio-card video-card" data-category="reels">
+                    <div class="card-img video-thumb"
+                        style="background-image: url('https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=800&q=80');">
+                        <div class="play-overlay"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-tag">Reels / Shorts</span>
+                        <h2>REELS PROMO</h2>
+                        <p>Edição vertical de alto impacto com transições neon e foco em retenção.</p>
+                        <button class="btn-watch-video" data-type="local" data-aspect="vertical"
+                            data-video-src="videos/reels_promo.mp4">Assistir Vídeo</button>
+                    </div>
+                </div>
+
+                <!-- Video: YouTube 1 -->
+                <div class="portfolio-card video-card" data-category="youtube">
+                    <div class="card-img video-thumb"
+                        style="background-image: url('https://images.unsplash.com/photo-1492619334764-22ce022d1dec?auto=format&fit=crop&w=800&q=80');">
+                        <div class="play-overlay"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-tag">YouTube Edit</span>
+                        <h2>MOTION GRAPHICS</h2>
+                        <p>Apresentação visual dinâmica com elementos 2D/3D e trilha sincronizada.</p>
+                        <button class="btn-watch-video" data-type="local" data-aspect="horizontal"
+                            data-video-src="videos/motion_graphics.mp4">Assistir Vídeo</button>
+                    </div>
+                </div>
+
+                <!-- Video: YouTube 2 -->
+                <div class="portfolio-card video-card" data-category="youtube">
+                    <div class="card-img video-thumb"
+                        style="background-image: url('https://images.unsplash.com/photo-1574717024453-354056bad99c?auto=format&fit=crop&w=800&q=80');">
+                        <div class="play-overlay"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-tag">YouTube Edit</span>
+                        <h2>YOUTUBE EDIT</h2>
+                        <p>Edição estratégica de alta retenção para canais de entretenimento.</p>
+                        <button class="btn-watch-video" data-type="local" data-aspect="horizontal"
+                            data-video-src="videos/youtube_edit.mp4">Assistir Vídeo</button>
+                    </div>
+                </div>
                 <!-- Burger -->
-                <div class="portfolio-card">
+                <div class="portfolio-card" data-category="site">
                     <div class="card-img" style="background-image: url('brasa-burger/hero.png');"></div>
                     <div class="card-content">
+                        <span class="card-tag">Landing Page</span>
                         <h2>Brasa Burger 99</h2>
-                        <p>Visual impactante em Dark Mode focado em delivery e gastronomia artesanal.</p>
+                        <p>Focado em delivery e gastronomia artesanal com Dark mode premium.</p>
                         <a href="brasa-burger/index.html" class="btn-view-project">Explorar Site</a>
                     </div>
                 </div>
 
                 <!-- Lawyer -->
-                <div class="portfolio-card">
+                <div class="portfolio-card" data-category="site">
                     <div class="card-img" style="background-image: url('mendes-associados/hero.png');"></div>
                     <div class="card-content">
+                        <span class="card-tag">Institucional</span>
                         <h2>Mendes & Associados</h2>
-                        <p>Design sóbrio e elegante para advocacia, focado em autoridade e confiança.</p>
+                        <p>Design sóbrio focado em autoridade para advocacia de elite.</p>
                         <a href="mendes-associados/index.html" class="btn-view-project">Explorar Site</a>
                     </div>
                 </div>
 
                 <!-- Barber -->
-                <div class="portfolio-card">
+                <div class="portfolio-card" data-category="site">
                     <div class="card-img" style="background-image: url('navalha-club/hero.png');"></div>
                     <div class="card-content">
+                        <span class="card-tag">Agendamento</span>
                         <h2>Navalha Club</h2>
-                        <p>Estilo industrial e retrô para barbearia, otimizado para agendamentos rápidos.</p>
+                        <p>Estilo industrial clássico otimizado para conversão de novos clientes.</p>
                         <a href="navalha-club/index.html" class="btn-view-project">Explorar Site</a>
                     </div>
                 </div>
@@ -288,6 +343,19 @@
         <i class="fab fa-instagram"></i>
     </a>
 
+    <!-- Video Modal (Showcase Mode) -->
+    <div id="videoModal" class="video-modal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="video-wrapper">
+                <iframe id="videoFrame" src="" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen style="display: none;"></iframe>
+                <video id="localVideo" class="local-video-player" controls style="display: none;"></video>
+            </div>
+        </div>
+    </div>
+
     <script>
         // Hamburger Menu
         const hamburger = document.querySelector('.hamburger');
@@ -312,6 +380,82 @@
                     faqItem.classList.add('active');
                 }
             });
+        });
+
+        // Portfolio Filtering Logic
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Active class toggle
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+
+                portfolioItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.classList.remove('hidden');
+                        setTimeout(() => item.style.display = 'block', 300);
+                        setTimeout(() => item.style.opacity = '1', 350);
+                    } else {
+                        item.style.opacity = '0';
+                        setTimeout(() => item.style.display = 'none', 300);
+                        item.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+        // Video Modal Logic
+        const modal = document.getElementById('videoModal');
+        const videoFrame = document.getElementById('videoFrame');
+        const localVideo = document.getElementById('localVideo');
+        const closeBtn = document.querySelector('.close-modal');
+        const watchBtns = document.querySelectorAll('.btn-watch-video');
+
+        watchBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const type = btn.getAttribute('data-type');
+                const src = btn.getAttribute('data-video-src');
+                const aspect = btn.getAttribute('data-aspect') || 'horizontal';
+
+                // Reset displays and classes
+                videoFrame.style.display = 'none';
+                localVideo.style.display = 'none';
+                videoFrame.src = '';
+                localVideo.src = '';
+                modal.classList.remove('vertical', 'horizontal');
+                modal.classList.add(aspect);
+
+                if (type === 'local') {
+                    localVideo.src = src;
+                    localVideo.style.display = 'block';
+                    localVideo.play();
+                } else {
+                    videoFrame.src = `https://www.youtube.com/embed/${src}?autoplay=1`;
+                    videoFrame.style.display = 'block';
+                }
+
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        closeBtn.addEventListener('click', () => {
+            modal.classList.remove('active');
+            videoFrame.src = '';
+            localVideo.pause();
+            localVideo.src = '';
+            document.body.style.overflow = 'auto';
+        });
+
+        // Close modal on outside click
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeBtn.click();
+            }
         });
     </script>
 </body>
