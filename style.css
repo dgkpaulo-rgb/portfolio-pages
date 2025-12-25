@@ -1346,3 +1346,39 @@ nav ul li a:hover {
         padding: 30px 0;
     }
 }
+
+/* Dark Biblical Special Styling */
+.dark-biblical-card {
+    border-color: rgba(255, 170, 0, 0.1) !important;
+}
+
+.dark-biblical-card:hover {
+    border-color: #ffaa00 !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 30px rgba(255, 170, 0, 0.15) !important;
+}
+
+.dark-biblical-card .card-tag {
+    color: #ffaa00 !important;
+}
+
+.dark-biblical-card .play-overlay {
+    background: rgba(255, 170, 0, 0.9) !important;
+    box-shadow: 0 0 30px rgba(255, 170, 0, 0.5) !important;
+}
+
+.dark-biblical-card:hover .play-overlay {
+    background: #ffaa00 !important;
+    box-shadow: 0 0 50px #ffaa00 !important;
+}
+
+.dark-biblical-card .btn-watch-video {
+    background: rgba(255, 170, 0, 0.1) !important;
+    border-color: #ffaa00 !important;
+    color: #ffaa00 !important;
+}
+
+.dark-biblical-card .btn-watch-video:hover {
+    background: #ffaa00 !important;
+    color: #050505 !important;
+    box-shadow: 0 0 30px #ffaa00 !important;
+}
