@@ -2998,27 +2998,20 @@ nav ul li a:hover {
     letter-spacing: 3px;
 }
 
+/* Promo Modal Responsive */
 @media (max-width: 992px) {
-    .holographic-form {
-        grid-template-columns: 1fr;
-        padding: 40px;
-        gap: 40px;
-    }
-
-    .budget-text h2 {
-        font-size: 36px;
-    }
-
     .promo-content {
         max-width: 500px;
+        border-radius: 20px;
     }
 
     .promo-flex {
         flex-direction: column;
+        min-height: auto;
     }
 
     .promo-image {
-        height: 250px;
+        height: 220px;
     }
 
     .image-glow {
@@ -3026,27 +3019,60 @@ nav ul li a:hover {
     }
 
     .promo-body {
-        padding: 40px 30px;
+        padding: 30px 25px;
         text-align: center;
         align-items: center;
     }
 
     .promo-body h2 {
-        font-size: 28px;
+        font-size: 24px;
+        margin-bottom: 15px;
     }
 }
 
 @media (max-width: 600px) {
-    .form-row {
-        grid-template-columns: 1fr;
+    .promo-content {
+        padding: 0;
+        width: 92%;
+        margin: 0 auto;
     }
 
-    .promo-content {
-        padding: 40px 25px;
+    .promo-image {
+        height: 180px;
+    }
+
+    .promo-body {
+        padding: 25px 20px;
     }
 
     .promo-body h2 {
-        font-size: 26px;
+        font-size: 20px;
+        line-height: 1.2;
+    }
+
+    .promo-body p {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .promo-timer {
+        width: 100%;
+        padding: 12px 15px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .btn-promo-action {
+        width: 100%;
+        padding: 16px 20px;
+        font-size: 13px;
+    }
+
+    .close-promo {
+        top: 15px;
+        right: 15px;
+        width: 35px;
+        height: 35px;
     }
 }
 
@@ -3235,14 +3261,28 @@ nav ul li a:hover {
         max-width: 600px;
         margin-inline: auto;
     }
-    .future-card h3 { font-size: 30px; }
-    .future-content { padding: 40px; }
+
+    .future-card h3 {
+        font-size: 30px;
+    }
+
+    .future-content {
+        padding: 40px;
+    }
 }
 
 @media (max-width: 600px) {
-    .future-img { height: 300px; }
-    .future-card h3 { font-size: 26px; }
-    .future-content { padding: 30px 20px; }
+    .future-img {
+        height: 300px;
+    }
+
+    .future-card h3 {
+        font-size: 26px;
+    }
+
+    .future-content {
+        padding: 30px 20px;
+    }
 }
 
 /* Future Vision CTA Button */
@@ -3306,7 +3346,6 @@ nav ul li a:hover {
 .btn-future-cyber:hover .btn-glow {
     left: 150%;
 }
-
 
 /* Audio Section Cyber Button */
 .btn-audio-cyber {
@@ -3391,8 +3430,8 @@ nav ul li a:hover {
         flex-direction: column;
         text-align: center;
     }
+
     .btn-audio-cyber {
         width: 100%;
     }
 }
-
