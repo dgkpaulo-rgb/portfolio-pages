@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosso Casamento - Convite Digital</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@200;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <main class="container">
+        <!-- Capa do Convite -->
+        <section class="hero">
+            <div class="elegant-border"></div>
+            <div class="floating-elements">
+                <span class="icon-float">✨</span>
+                <span class="icon-float" style="animation-delay: 2s;">🕯️</span>
+                <span class="icon-float" style="animation-delay: 4s;">🕊️</span>
+            </div>
+            <h1 class="title">Camila & Ricardo</h1>
+            <h2 class="subtitle">Nosso Casamento</h2>
+            <p class="date">18 . 10 . 2026</p>
+            <div class="scroll-indicator">
+                <span>CONVITE</span>
+                <div class="line"></div>
+            </div>
+        </section>
+
+        <!-- Mensagem -->
+        <section class="message card">
+            <p>Com a benção de Deus e de nossos pais, convidamos você para celebrar o amor que nos une hoje e sempre.
+            </p>
+        </section>
+
+        <!-- Detalhes -->
+        <section class="details">
+            <div class="detail-item card">
+                <i class="fas fa-church"></i>
+                <h3>Cerimônia</h3>
+                <p>Às 18:30 horas</p>
+            </div>
+            <div class="detail-item card">
+                <i class="fa-solid fa-champagne-glasses"></i>
+                <h3>Recepção</h3>
+                <p>Nome do Local / Salão</p>
+                <p class="address">Endereço Completo - Cidade/UF</p>
+                <a href="https://maps.google.com" target="_blank" class="btn-outline">Ver Localização</a>
+            </div>
+        </section>
+
+        <!-- Sugestão de Presente -->
+        <section class="gifts card">
+            <h3>🎁 Presentes</h3>
+            <p>Sua presença é nosso maior presente! Se desejar nos agraciar com um mimo:</p>
+            <p><strong>Mimos via PIX:</strong></p>
+            <div class="pix-copy">
+                <input type="text" value="11999999999" id="pixKey" readonly>
+                <button onclick="copyPix()" class="btn-small">Copiar</button>
+            </div>
+        </section>
+
+        <!-- Confirmação -->
+        <section class="rsvp">
+            <h3>RSVP</h3>
+            <p>Sua confirmação é fundamental. Por favor, confirme até 20/09</p>
+            <a href="https://wa.me/5511999999999?text=Olá!%20Confirmamos%20presença%20no%20casamento%20de%20Camila%20e%20Ricardo."
+                class="btn-primary" target="_blank">
+                Confirmar Presença
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>Feito com ❤️</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

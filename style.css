@@ -243,34 +243,60 @@ nav ul li a:hover {
     /* Reduced margin */
 }
 
-.btn-cyber {
+.btn-cyber,
+.btn-main-cyber {
     background: var(--neon-cyan);
     color: black;
     font-family: 'Orbitron', sans-serif;
     font-weight: 800;
-    font-size: 14px;
+    font-size: 13px;
     padding: 16px 36px;
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     border: none;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 12px;
 }
 
-.btn-cyber.outline {
+.btn-outline-cyber {
+    background: transparent;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 16px 36px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
     clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);
+    transition: all 0.4s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
 }
 
-.btn-cyber:hover {
+.btn-cyber:hover,
+.btn-main-cyber:hover {
     background: white;
-    box-shadow: 0 0 30px var(--neon-cyan);
-    transform: scale(1.05) translateY(-2px);
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(0, 243, 255, 0.5);
     color: black !important;
+}
+
+.btn-outline-cyber:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--neon-cyan);
+    color: var(--neon-cyan) !important;
+    transform: translateY(-5px);
 }
 
 /* About Section */
@@ -3433,5 +3459,230 @@ nav ul li a:hover {
 
     .btn-audio-cyber {
         width: 100%;
+    }
+}
+
+/* === INVITATIONS LANDING SECTION === */
+.invitations-landing {
+    padding: 120px 0;
+    background: radial-gradient(circle at 10% 20%, rgba(0, 243, 255, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(255, 0, 255, 0.05) 0%, transparent 40%);
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.invitation-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.invitation-text .badge {
+    background: rgba(0, 243, 255, 0.1);
+    color: var(--neon-cyan);
+    padding: 6px 15px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 1px solid rgba(0, 243, 255, 0.3);
+    margin-bottom: 25px;
+    display: inline-block;
+}
+
+.invitation-features {
+    list-style: none;
+    margin: 35px 0;
+}
+
+.invitation-features li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--text-muted);
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.invitation-features li i {
+    color: var(--neon-cyan);
+    font-size: 20px;
+    filter: drop-shadow(0 0 5px var(--neon-cyan));
+}
+
+.invitation-pricing {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 20px;
+    width: fit-content;
+    margin-bottom: 40px;
+    backdrop-filter: blur(10px);
+}
+
+.price-label {
+    color: var(--text-muted);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.main-price {
+    display: flex;
+    align-items: flex-start;
+    color: white;
+}
+
+.main-price .currency {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+.main-price .amount {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 54px;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--neon-cyan);
+    text-shadow: 0 0 20px rgba(0, 243, 255, 0.4);
+}
+
+.main-price .cents {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.price-info {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.invitation-actions {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Showcase Side */
+.invitation-showcase {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.mockup-container {
+    position: relative;
+    width: 320px;
+    height: 600px;
+    background: #000;
+    border-radius: 40px;
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 50px 100px rgba(0, 0, 0, 0.9),
+        0 0 80px rgba(0, 243, 255, 0.15);
+    transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.mockup-container:hover {
+    transform: translateY(-10px) rotate3d(1, 1, 0, 5deg);
+    box-shadow: 0 70px 120px rgba(0, 0, 0, 1),
+        0 0 100px rgba(0, 243, 255, 0.25);
+}
+
+.phone-mockup {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+.phone-mockup img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.mockup-container:hover .phone-mockup img {
+    transform: scale(1.1);
+}
+
+.floating-icons i {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: rgba(15, 15, 15, 0.8);
+    border: 1px solid rgba(0, 243, 255, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--neon-cyan);
+    font-size: 24px;
+    backdrop-filter: blur(5px);
+    z-index: 5;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.float-1 {
+    top: 100px;
+    left: -30px;
+    animation: float-anim 3s infinite ease-in-out;
+}
+
+.float-2 {
+    bottom: 150px;
+    right: -30px;
+    animation: float-anim 3s infinite ease-in-out 1s;
+}
+
+.float-3 {
+    top: 350px;
+    left: -40px;
+    animation: float-anim 3s infinite ease-in-out 0.5s;
+}
+
+@keyframes float-anim {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@media (max-width: 992px) {
+    .invitation-hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 60px;
+    }
+
+    .invitation-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .invitation-pricing {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .invitation-actions {
+        justify-content: center;
     }
 }

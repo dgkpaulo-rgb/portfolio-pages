@@ -1,0 +1,281 @@
+:root {
+    --primary-color: #0ff;
+    /* Neon Cyan */
+    --secondary-color: #f0f;
+    /* Neon Pink */
+    --accent-color: #00ff00;
+    /* Neon Green */
+    --text-color: #ffffff;
+    --bg-color: #050505;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: var(--bg-color);
+    background-image:
+        radial-gradient(circle at 2px 2px, rgba(255, 255, 255, 0.05) 1px, transparent 0),
+        linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+    background-size: 30px 30px, auto;
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Typography */
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    text-shadow: 0 0 10px var(--primary-color), 0 0 30px var(--primary-color);
+    margin-bottom: 0px;
+    letter-spacing: 5px;
+}
+
+h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    letter-spacing: 12px;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 10px var(--secondary-color);
+}
+
+h3 {
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+}
+
+/* Card Style - Glassmorphism */
+.card {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 2.5rem 1.5rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+    transform: rotate(45deg);
+    animation: flow 4s linear infinite;
+}
+
+@keyframes flow {
+    0% {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    100% {
+        transform: translate(50%, 50%) rotate(45deg);
+    }
+}
+
+/* Hero Section */
+.hero {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.date {
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--bg-color);
+    background: var(--primary-color);
+    padding: 10px 40px;
+    border-radius: 4px;
+    box-shadow: 0 0 30px var(--primary-color);
+    margin-top: 20px;
+    font-family: 'Orbitron', sans-serif;
+    transform: skewX(-15deg);
+}
+
+/* Floating Elements */
+.icon-float {
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0.8;
+    filter: drop-shadow(0 0 10px currentColor);
+    animation: neon-float 5s ease-in-out infinite;
+}
+
+@keyframes neon-float {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+        filter: drop-shadow(0 0 10px currentColor);
+    }
+
+    50% {
+        transform: translateY(-20px) scale(1.1);
+        filter: drop-shadow(0 0 25px currentColor);
+    }
+}
+
+/* Buttons */
+.btn-primary {
+    display: block;
+    width: 100%;
+    background: transparent;
+    color: var(--secondary-color);
+    padding: 18px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    font-family: 'Orbitron', sans-serif;
+    border: 2px solid var(--secondary-color);
+    box-shadow: inset 0 0 10px var(--secondary-color), 0 0 15px var(--secondary-color);
+    transition: all 0.2s;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.btn-primary:active {
+    background: var(--secondary-color);
+    color: black;
+}
+
+.btn-outline {
+    display: inline-block;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 15px;
+    font-family: 'Space Grotesk', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.btn-small {
+    background: transparent;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 0 5px var(--accent-color);
+}
+
+/* Pix Section */
+.pix-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+input#pixKey {
+    padding: 15px;
+    border: 1px solid var(--primary-color);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    font-family: 'Space Grotesk', sans-serif;
+    border-radius: 4px;
+}
+
+/* Music Control */
+.music-control {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    background: var(--card-bg);
+    border: 1px solid var(--primary-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    cursor: pointer;
+    color: var(--primary-color);
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+/* RSVP Section */
+.rsvp {
+    text-align: center;
+    margin: 5rem 0;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 0;
+    opacity: 0.3;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    color: var(--primary-color);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.8rem;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.scroll-indicator i {
+    animation: bounce 2s infinite;
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+}

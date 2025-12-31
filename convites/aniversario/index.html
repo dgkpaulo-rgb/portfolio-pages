@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Party - Convite Digital</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Space+Grotesk:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <main class="container">
+        <!-- Capa do Convite -->
+        <section class="hero">
+            <div class="glitch-bg"></div>
+            <div class="floating-elements">
+                <span class="icon-float">⚡</span>
+                <span class="icon-float" style="animation-delay: 1s;">🔥</span>
+                <span class="icon-float" style="animation-delay: 2s;">🎧</span>
+            </div>
+            <h1 class="title">Luccas</h1>
+            <h2 class="subtitle">B-Day • 25 Anos</h2>
+            <p class="date">12 / 07 / 2026</p>
+            <div class="scroll-indicator">
+                <i class="fas fa-angles-down"></i>
+                <span>EXPLORE</span>
+            </div>
+        </section>
+
+        <!-- Mensagem -->
+        <section class="message card">
+            <p>A vida começa aos 30! Vamos celebrar essa nova fase com muita música, drinks e amigos. Sua presença é
+                essencial!</p>
+        </section>
+
+        <!-- Detalhes -->
+        <section class="details">
+            <div class="detail-item card">
+                <i class="fas fa-clock"></i>
+                <h3>Let's Start</h3>
+                <p>O line-up começa às 21:00h</p>
+            </div>
+            <div class="detail-item card">
+                <i class="fas fa-location-dot"></i>
+                <h3>Main Stage</h3>
+                <p>Nome da Casa / Endereço</p>
+                <p class="address">Rua da Balada, 777 - Bairro/Cidade</p>
+                <a href="https://maps.google.com" target="_blank" class="btn-outline">Open Maps</a>
+            </div>
+        </section>
+
+        <!-- Sugestão de Presente -->
+        <section class="gifts card">
+            <h3>🎁 Mimos</h3>
+            <p>Sua presença é o melhor presente, mas se quiser nos mimar:</p>
+            <p><strong>PIX para mimos:</strong></p>
+            <div class="pix-copy">
+                <input type="text" value="11999999999" id="pixKey" readonly>
+                <button onclick="copyPix()" class="btn-small">Copiar</button>
+            </div>
+        </section>
+
+        <!-- Confirmação -->
+        <section class="rsvp">
+            <h3>Confirm your Presence</h3>
+            <p>Don't stay out of this! Confirm until 30/06</p>
+            <a href="https://wa.me/5511999999999?text=Olá!%20Tô%20dentro%20do%20B-Day%20do%20Luccas!"
+                class="btn-primary" target="_blank">
+                <i class="fab fa-whatsapp"></i> Confirm via WhatsApp
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>Feito com ❤️</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

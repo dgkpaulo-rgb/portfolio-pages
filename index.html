@@ -313,6 +313,62 @@
         </div>
     </section>
 
+    <!-- Dedicated Invitations Landing Section -->
+    <section id="convites-landing" class="invitations-landing">
+        <div class="container">
+            <div class="invitation-hero">
+                <div class="invitation-text">
+                    <span class="badge">Novo Serviço</span>
+                    <h2 class="section-title">Convites <span class="highlight">Digitais</span> Interativos</h2>
+                    <p class="section-subtitle">Transforme seu evento com a elegância e a tecnologia que seus convidados
+                        merecem.</p>
+
+                    <ul class="invitation-features">
+                        <li><i class="fas fa-check-circle"></i> Trilha Sonora Personalizada</li>
+                        <li><i class="fas fa-check-circle"></i> Localização GPS Integrada (Google Maps)</li>
+                        <li><i class="fas fa-check-circle"></i> Confirmação de Presença (RSVP) no WhatsApp</li>
+                        <li><i class="fas fa-check-circle"></i> Sugestão de Presentes & PIX Copia e Cola</li>
+                    </ul>
+
+                    <div class="invitation-pricing">
+                        <span class="price-label">A partir de</span>
+                        <div class="main-price">
+                            <span class="currency">R$</span>
+                            <span class="amount">70</span>
+                            <span class="cents">,00</span>
+                        </div>
+                        <p class="price-info">Pagamento único • Entrega rápida em até 48h</p>
+                    </div>
+
+                    <div class="invitation-actions">
+                        <a href="https://wa.me/5527998818305?text=Olá!%20Gostaria%20de%20um%20convite%20digital%20personalizado."
+                            class="btn-main-cyber" target="_blank">
+                            <span>Encomendar Agora</span>
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                        <a href="#convites" class="btn-outline-cyber">
+                            <span>Ver Modelos</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="invitation-showcase">
+                    <div class="mockup-container">
+                        <div class="phone-mockup">
+                            <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80"
+                                alt="Convite Showcase Elegante">
+                        </div>
+                        <div class="floating-icons">
+                            <i class="fas fa-music float-1"></i>
+                            <i class="fas fa-map-marker-alt float-2"></i>
+                            <i class="fab fa-whatsapp float-3"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Main Portfolio -->
     <!-- Section 1: Hosting & Management -->
     <section class="pricing-section" id="planos">
@@ -461,12 +517,55 @@
             <div class="portfolio-filters">
                 <button class="filter-btn" data-filter="all">Todos</button>
                 <button class="filter-btn" data-filter="site">Sites & LPs</button>
-                <button class="filter-btn active" data-filter="dark-biblical">Dark Biblical</button>
+                <button class="filter-btn active" data-filter="convites">Convites Interativos</button>
+                <button class="filter-btn" data-filter="dark-biblical">Dark Biblical</button>
                 <button class="filter-btn" data-filter="reels">Reels & Shorts</button>
                 <button class="filter-btn" data-filter="youtube">YouTube Edits</button>
             </div>
 
-            <div class="portfolio-grid">
+            <div class="portfolio-grid" id="convites">
+                <!-- Convite 1: Chá de Bebê -->
+                <div class="portfolio-card" data-category="convites">
+                    <div class="card-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1510076857177-7470076d4098?auto=format&fit=crop&w=800&q=80');">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-tag">Web Convite</span>
+                        <h2>Chá do Theo (Soft)</h2>
+                        <p>Design "Fofo" com cores pastéis, elementos flutuantes e bordas arredondadas.</p>
+                        <a href="convites/cha-de-bebe/index.html" class="btn-view-project" target="_blank">Abrir Convite
+                            Interativo</a>
+                    </div>
+                </div>
+
+                <!-- Convite 2: Aniversário Neon -->
+                <div class="portfolio-card" data-category="convites">
+                    <div class="card-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=800&q=80');">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-tag">Web Convite</span>
+                        <h2>Luccas 25 Anos (Neon)</h2>
+                        <p>Estilo "Cyber/Neon" com modo escuro, brilhos intensos e tipografia futurista.</p>
+                        <a href="convites/aniversario/index.html" class="btn-view-project" target="_blank">Abrir Convite
+                            Interativo</a>
+                    </div>
+                </div>
+
+                <!-- Convite 3: Casamento Elegante -->
+                <div class="portfolio-card" data-category="convites">
+                    <div class="card-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80');">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-tag">Web Convite</span>
+                        <h2>Camila & Ricardo (Luxo)</h2>
+                        <p>Design "Luxo Minimalista" com tipografia clássica e detalhes em dourado fino.</p>
+                        <a href="convites/casamento/index.html" class="btn-view-project" target="_blank">Abrir Convite
+                            Interativo</a>
+                    </div>
+                </div>
+
                 <!-- Video: Reels 1 -->
                 <div class="portfolio-card video-card" data-category="reels">
                     <div class="card-img video-thumb"
@@ -998,9 +1097,9 @@
             sessionStorage.setItem('neoncut_promo_shown', 'true');
         });
 
-        // Initialize with Dark Biblical by default
+        // Initialize with all by default
         document.addEventListener('DOMContentLoaded', () => {
-            applyFilter('dark-biblical');
+            applyFilter('all');
             showPromo();
         });
 

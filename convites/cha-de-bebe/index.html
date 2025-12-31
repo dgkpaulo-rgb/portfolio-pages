@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chá de Bebê - Convite Digital</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;500;700&family=Comfortaa:wght@300;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="music-control" id="musicControl">
+        <i class="fas fa-music"></i>
+    </div>
+
+    <main class="container">
+        <!-- Capa do Convite -->
+        <section class="hero">
+            <div class="floating-elements">
+                <span class="icon-float">☁️</span>
+                <span class="icon-float" style="animation-delay: 1.5s;">🧸</span>
+                <span class="icon-float" style="animation-delay: 3s;">⭐</span>
+            </div>
+            <h1 class="title">Chá do Theo</h1>
+            <h2 class="subtitle">Ele está chegando!</h2>
+            <p class="date">25 de Maio • 15h</p>
+            <div class="scroll-indicator">
+                <span>Arraste para abrir</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+
+        <!-- Mensagem -->
+        <section class="message card">
+            <p>Estamos muito felizes em compartilhar esse momento doce com você! Prepare o coração para conhecer o nosso
+                maior tesouro.</p>
+        </section>
+
+        <!-- Detalhes -->
+        <section class="details">
+            <div class="detail-item card">
+                <i class="fas fa-clock"></i>
+                <h3>Quando?</h3>
+                <p>À partir das 15:00h</p>
+            </div>
+            <div class="detail-item card">
+                <i class="fas fa-home"></i>
+                <h3>Onde?</h3>
+                <p>Nome do Local ou Endereço</p>
+                <p class="address">Rua Exemplo, 123 - Cidade/UF</p>
+                <a href="https://maps.google.com" target="_blank" class="btn-outline">Ver Local no GPS</a>
+            </div>
+        </section>
+
+        <!-- Sugestão de Presente -->
+        <section class="gifts card">
+            <h3>🎁 Sugestão de Presente</h3>
+            <p>Fraldas Tamanho P ou M</p>
+            <p><strong>Ou mimos via PIX:</strong></p>
+            <div class="pix-copy">
+                <input type="text" value="11999999999" id="pixKey" readonly>
+                <button onclick="copyPix()" class="btn-small">Copiar</button>
+            </div>
+        </section>
+
+        <!-- Confirmação -->
+        <section class="rsvp">
+            <h3>Confirme sua presença!</h3>
+            <p>Por favor, nos avise até o dia 15/05</p>
+            <a href="https://wa.me/5511999999999?text=Olá!%20Confirmamos%20presença%20no%20Chá%20do%20Theo!"
+                class="btn-primary" target="_blank">
+                <i class="fab fa-whatsapp"></i> Confirmar pelo WhatsApp
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>Feito com ❤️</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

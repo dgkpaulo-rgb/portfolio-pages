@@ -1,0 +1,258 @@
+:root {
+    --primary-color: #d4af37;
+    /* Metallic Gold */
+    --accent-color: #c5a028;
+    /* Deeper Gold */
+    --text-color: #2c2c2c;
+    --bg-color: #ffffff;
+    --secondary-bg: #faf7f2;
+    /* Soft Cream */
+    --white: #ffffff;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Typography */
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    letter-spacing: -1px;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 2rem;
+}
+
+h3 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+/* Card Style - Minimalist */
+.card {
+    background: var(--white);
+    padding: 3rem 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    border-bottom: 1px solid #efefef;
+    position: relative;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    border: 20px solid var(--secondary-bg);
+}
+
+.date {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-top: 20px;
+    border-top: 1px solid var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+    padding: 10px 0;
+    width: 200px;
+}
+
+/* Floating Elements */
+.icon-float {
+    position: absolute;
+    font-size: 1.5rem;
+    opacity: 0.4;
+    animation: simple-float 10s linear infinite;
+}
+
+@keyframes simple-float {
+    0% {
+        transform: translateY(0) rotate(0);
+    }
+
+    50% {
+        transform: translateY(-30px) rotate(10deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0);
+    }
+}
+
+/* Buttons */
+.btn-primary {
+    display: block;
+    width: 100%;
+    background: var(--text-color);
+    color: white;
+    padding: 18px;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: var(--primary-color);
+}
+
+.btn-outline {
+    display: inline-block;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 15px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.btn-small {
+    background: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 8px 20px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+/* Pix Section */
+.pix-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+input#pixKey {
+    padding: 15px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    color: #888;
+}
+
+/* Music Control */
+.music-control {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background: var(--secondary-bg);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.scroll-indicator span {
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    color: var(--primary-color);
+}
+
+.scroll-indicator .line {
+    width: 1px;
+    height: 40px;
+    background: var(--primary-color);
+    animation: line-grow 2s infinite;
+}
+
+@keyframes line-grow {
+    0% {
+        height: 0;
+        opacity: 0;
+    }
+
+    50% {
+        height: 40px;
+        opacity: 1;
+    }
+
+    100% {
+        height: 40px;
+        opacity: 0;
+    }
+}
+
+/* RSVP Section */
+.rsvp {
+    text-align: center;
+    margin: 6rem 0;
+}
+
+footer {
+    text-align: center;
+    padding: 40px 0;
+    opacity: 0.4;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.22rem;
+    }
+
+    .hero {
+        border-width: 10px;
+    }
+}
