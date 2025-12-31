@@ -514,188 +514,263 @@
             <h2 class="section-title">Nossos Projetos</h2>
             <p class="section-subtitle">Soluções digitais que geram impacto e conversão.</p>
 
-            <div class="portfolio-filters">
-                <button class="filter-btn" data-filter="all">Todos</button>
-                <button class="filter-btn" data-filter="site">Sites & LPs</button>
-                <button class="filter-btn active" data-filter="convites">Convites Interativos</button>
-                <button class="filter-btn" data-filter="dark-biblical">Dark Biblical</button>
-                <button class="filter-btn" data-filter="reels">Reels & Shorts</button>
-                <button class="filter-btn" data-filter="youtube">YouTube Edits</button>
-            </div>
 
-            <div class="portfolio-grid" id="convites">
-                <!-- Convite 1: Chá de Bebê -->
-                <div class="portfolio-card" data-category="convites">
-                    <div class="card-img"
-                        style="background-image: url('https://images.unsplash.com/photo-1510076857177-7470076d4098?auto=format&fit=crop&w=800&q=80');">
+            <!-- Portfolio Drawers -->
+            <div class="portfolio-drawers">
+
+                <!-- Drawer 1: Convites Interativos -->
+                <div class="portfolio-drawer">
+                    <div class="drawer-header" onclick="toggleDrawer(this)">
+                        <div class="drawer-title">
+                            <i class="fas fa-envelope-open-text"></i>
+                            <h3>Convites Interativos</h3>
+                            <span class="project-count">3 projetos</span>
+                        </div>
+                        <i class="fas fa-chevron-down drawer-icon"></i>
                     </div>
-                    <div class="card-content">
-                        <span class="card-tag">Web Convite</span>
-                        <h2>Chá do Theo (Soft)</h2>
-                        <p>Design "Fofo" com cores pastéis, elementos flutuantes e bordas arredondadas.</p>
-                        <a href="convites/cha-de-bebe/index.html" class="btn-view-project" target="_blank">Abrir Convite
-                            Interativo</a>
+                    <div class="drawer-content">
+                        <div class="drawer-grid">
+                            <!-- Convite 1: Chá de Bebê -->
+                            <div class="portfolio-card" data-category="convites">
+                                <div class="card-img"
+                                    style="background-image: url('https://images.unsplash.com/photo-1510076857177-7470076d4098?auto=format&fit=crop&w=800&q=80');">
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-tag">Web Convite</span>
+                                    <h2>Chá do Theo (Soft)</h2>
+                                    <p>Design "Fofo" com cores pastéis, elementos flutuantes e bordas arredondadas.</p>
+                                    <a href="convites/cha-de-bebe/index.html" class="btn-view-project"
+                                        target="_blank">Abrir Convite
+                                        Interativo</a>
+                                </div>
+                            </div>
+
+                            <!-- Convite 2: Aniversário Neon -->
+                            <div class="portfolio-card" data-category="convites">
+                                <div class="card-img"
+                                    style="background-image: url('https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=800&q=80');">
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-tag">Web Convite</span>
+                                    <h2>Luccas 25 Anos (Neon)</h2>
+                                    <p>Estilo "Cyber/Neon" com modo escuro, brilhos intensos e tipografia futurista.</p>
+                                    <a href="convites/aniversario/index.html" class="btn-view-project"
+                                        target="_blank">Abrir Convite
+                                        Interativo</a>
+                                </div>
+                            </div>
+
+                            <!-- Convite 3: Casamento Elegante -->
+                            <div class="portfolio-card" data-category="convites">
+                                <div class="card-img"
+                                    style="background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80');">
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-tag">Web Convite</span>
+                                    <h2>Camila & Ricardo (Luxo)</h2>
+                                    <p>Design "Luxo Minimalista" com tipografia clássica e detalhes em dourado fino.</p>
+                                    <a href="convites/casamento/index.html" class="btn-view-project"
+                                        target="_blank">Abrir Convite
+                                        Interativo</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Convite 2: Aniversário Neon -->
-                <div class="portfolio-card" data-category="convites">
-                    <div class="card-img"
-                        style="background-image: url('https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=800&q=80');">
+                <!-- Drawer 2: Reels & Shorts -->
+                <div class="portfolio-drawer">
+                    <div class="drawer-header" onclick="toggleDrawer(this)">
+                        <div class="drawer-title">
+                            <i class="fas fa-mobile-alt"></i>
+                            <h3>Reels & Shorts</h3>
+                            <span class="project-count">1 projeto</span>
+                        </div>
+                        <i class="fas fa-chevron-down drawer-icon"></i>
                     </div>
-                    <div class="card-content">
-                        <span class="card-tag">Web Convite</span>
-                        <h2>Luccas 25 Anos (Neon)</h2>
-                        <p>Estilo "Cyber/Neon" com modo escuro, brilhos intensos e tipografia futurista.</p>
-                        <a href="convites/aniversario/index.html" class="btn-view-project" target="_blank">Abrir Convite
-                            Interativo</a>
-                    </div>
-                </div>
-
-                <!-- Convite 3: Casamento Elegante -->
-                <div class="portfolio-card" data-category="convites">
-                    <div class="card-img"
-                        style="background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80');">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-tag">Web Convite</span>
-                        <h2>Camila & Ricardo (Luxo)</h2>
-                        <p>Design "Luxo Minimalista" com tipografia clássica e detalhes em dourado fino.</p>
-                        <a href="convites/casamento/index.html" class="btn-view-project" target="_blank">Abrir Convite
-                            Interativo</a>
-                    </div>
-                </div>
-
-                <!-- Video: Reels 1 -->
-                <div class="portfolio-card video-card" data-category="reels">
-                    <div class="card-img video-thumb"
-                        style="background-image: url('https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=800&q=80');">
-                        <div class="play-overlay"><i class="fas fa-play"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <span class="card-tag">Reels / Shorts</span>
-                        <h2>REELS PROMO</h2>
-                        <p>Edição vertical de alto impacto com transições neon e foco em retenção.</p>
-                        <button class="btn-watch-video" data-type="local" data-aspect="vertical"
-                            data-video-src="videos/reels_promo.mp4">Assistir Vídeo</button>
+                    <div class="drawer-content">
+                        <div class="drawer-grid">
+                            <!-- Video: Reels 1 -->
+                            <div class="portfolio-card video-card" data-category="reels">
+                                <div class="card-img video-thumb"
+                                    style="background-image: url('https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=800&q=80');">
+                                    <div class="play-overlay"><i class="fas fa-play"></i></div>
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-tag">Reels / Shorts</span>
+                                    <h2>REELS PROMO</h2>
+                                    <p>Edição vertical de alto impacto com transições neon e foco em retenção.</p>
+                                    <button class="btn-watch-video" data-type="local" data-aspect="vertical"
+                                        data-video-src="videos/reels_promo.mp4">Assistir Vídeo</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Video: YouTube 1 -->
-                <div class="portfolio-card video-card" data-category="youtube">
-                    <div class="card-img video-thumb"
-                        style="background-image: url('https://images.unsplash.com/photo-1492619334764-22ce022d1dec?auto=format&fit=crop&w=800&q=80');">
-                        <div class="play-overlay"><i class="fas fa-play"></i></div>
+                <!-- Drawer 3: YouTube Edits -->
+                <div class="portfolio-drawer">
+                    <div class="drawer-header" onclick="toggleDrawer(this)">
+                        <div class="drawer-title">
+                            <i class="fab fa-youtube"></i>
+                            <h3>YouTube Edits</h3>
+                            <span class="project-count">2 projetos</span>
+                        </div>
+                        <i class="fas fa-chevron-down drawer-icon"></i>
                     </div>
-                    <div class="card-content">
-                        <span class="card-tag">YouTube Edit</span>
-                        <h2>MOTION GRAPHICS</h2>
-                        <p>Apresentação visual dinâmica com elementos 2D/3D e trilha sincronizada.</p>
-                        <button class="btn-watch-video" data-type="local" data-aspect="horizontal"
-                            data-video-src="videos/motion_graphics.mp4">Assistir Vídeo</button>
+                    <div class="drawer-content">
+                        <div class="drawer-grid">
+                            <!-- Video: YouTube 1 -->
+                            <div class="portfolio-card video-card" data-category="youtube">
+                                <div class="card-img video-thumb"
+                                    style="background-image: url('https://images.unsplash.com/photo-1492619334764-22ce022d1dec?auto=format&fit=crop&w=800&q=80');">
+                                    <div class="play-overlay"><i class="fas fa-play"></i></div>
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-tag">YouTube Edit</span>
+                                    <h2>MOTION GRAPHICS</h2>
+                                    <p>Apresentação visual dinâmica com elementos 2D/3D e trilha sincronizada.</p>
+                                    <button class="btn-watch-video" data-type="local" data-aspect="horizontal"
+                                        data-video-src="videos/motion_graphics.mp4">Assistir Vídeo</button>
+                                </div>
+                            </div>
+
+                            <!-- Video: YouTube 2 -->
+                            <div class="portfolio-card video-card" data-category="youtube">
+                                <div class="card-img video-thumb"
+                                    style="background-image: url('https://images.unsplash.com/photo-1574717024453-354056bad99c?auto=format&fit=crop&w=800&q=80');">
+                                    <div class="play-overlay"><i class="fas fa-play"></i></div>
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-tag">YouTube Edit</span>
+                                    <h2>YOUTUBE EDIT</h2>
+                                    <p>Edição estratégica de alta retenção para canais de entretenimento.</p>
+                                    <button class="btn-watch-video" data-type="local" data-aspect="horizontal"
+                                        data-video-src="videos/youtube_edit.mp4">Assistir Vídeo</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Video: YouTube 2 -->
-                <div class="portfolio-card video-card" data-category="youtube">
-                    <div class="card-img video-thumb"
-                        style="background-image: url('https://images.unsplash.com/photo-1574717024453-354056bad99c?auto=format&fit=crop&w=800&q=80');">
-                        <div class="play-overlay"><i class="fas fa-play"></i></div>
+                <!-- Drawer 4: Dark Biblical -->
+                <div class="portfolio-drawer">
+                    <div class="drawer-header" onclick="toggleDrawer(this)">
+                        <div class="drawer-title">
+                            <i class="fas fa-book-dead"></i>
+                            <h3>Dark Biblical</h3>
+                            <span class="project-count">3 projetos</span>
+                        </div>
+                        <i class="fas fa-chevron-down drawer-icon"></i>
                     </div>
-                    <div class="card-content">
-                        <span class="card-tag">YouTube Edit</span>
-                        <h2>YOUTUBE EDIT</h2>
-                        <p>Edição estratégica de alta retenção para canais de entretenimento.</p>
-                        <button class="btn-watch-video" data-type="local" data-aspect="horizontal"
-                            data-video-src="videos/youtube_edit.mp4">Assistir Vídeo</button>
+                    <div class="drawer-content">
+                        <div class="drawer-grid">
+                            <!-- Video: Dark Biblical 1 -->
+                            <div class="portfolio-card video-card dark-biblical-card" data-category="dark-biblical">
+                                <div class="card-img video-thumb"
+                                    style="background-image: url('https://img.youtube.com/vi/wDX40ckRV5Y/maxresdefault.jpg');">
+                                    <div class="play-overlay"><i class="fas fa-play"></i></div>
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-tag">Dark Biblical</span>
+                                    <h2>O PACTO DOS VIGILANTES</h2>
+                                    <p>Narrativa épica e sombria sobre os segredos mais profundos da Bíblia.</p>
+                                    <button class="btn-watch-video" data-type="youtube" data-aspect="horizontal"
+                                        data-video-src="wDX40ckRV5Y">Assistir Vídeo</button>
+                                </div>
+                            </div>
+
+                            <!-- Video: Dark Biblical 2 -->
+                            <div class="portfolio-card video-card dark-biblical-card" data-category="dark-biblical">
+                                <div class="card-img video-thumb"
+                                    style="background-image: url('https://img.youtube.com/vi/ZlMKlWebvd4/maxresdefault.jpg');">
+                                    <div class="play-overlay"><i class="fas fa-play"></i></div>
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-tag">Storytelling Épico</span>
+                                    <h2>FORMA DOS ANJOS</h2>
+                                    <p>Visualização cinematográfica das descrições bíblicas mais assustadoras.</p>
+                                    <button class="btn-watch-video" data-type="youtube" data-aspect="horizontal"
+                                        data-video-src="ZlMKlWebvd4">Assistir Vídeo</button>
+                                </div>
+                            </div>
+
+                            <!-- Video: Dark Biblical 3 -->
+                            <div class="portfolio-card video-card dark-biblical-card" data-category="dark-biblical">
+                                <div class="card-img video-thumb"
+                                    style="background-image: url('https://img.youtube.com/vi/B2LdCPn6YpU/maxresdefault.jpg');">
+                                    <div class="play-overlay"><i class="fas fa-play"></i></div>
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-tag">Curiosidades Dark</span>
+                                    <h2>O ANJO DO MASSACRE</h2>
+                                    <p>Edição de alto impacto narrando eventos bíblicos de escala monumental.</p>
+                                    <button class="btn-watch-video" data-type="youtube" data-aspect="horizontal"
+                                        data-video-src="B2LdCPn6YpU">Assistir Vídeo</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Video: Dark Biblical 1 -->
-                <div class="portfolio-card video-card dark-biblical-card" data-category="dark-biblical">
-                    <div class="card-img video-thumb"
-                        style="background-image: url('https://img.youtube.com/vi/wDX40ckRV5Y/maxresdefault.jpg');">
-                        <div class="play-overlay"><i class="fas fa-play"></i></div>
+                <!-- Drawer 5: Sites & LPs -->
+                <div class="portfolio-drawer">
+                    <div class="drawer-header" onclick="toggleDrawer(this)">
+                        <div class="drawer-title">
+                            <i class="fas fa-laptop-code"></i>
+                            <h3>Sites & Landing Pages</h3>
+                            <span class="project-count">4 projetos</span>
+                        </div>
+                        <i class="fas fa-chevron-down drawer-icon"></i>
                     </div>
-                    <div class="card-content">
-                        <span class="card-tag">Dark Biblical</span>
-                        <h2>O PACTO DOS VIGILANTES</h2>
-                        <p>Narrativa épica e sombria sobre os segredos mais profundos da Bíblia.</p>
-                        <button class="btn-watch-video" data-type="youtube" data-aspect="horizontal"
-                            data-video-src="wDX40ckRV5Y">Assistir Vídeo</button>
-                    </div>
-                </div>
+                    <div class="drawer-content">
+                        <div class="drawer-grid">
+                            <div class="portfolio-card" data-category="site">
+                                <div class="card-img" style="background-image: url('brasa-burger/hero.png');"></div>
+                                <div class="card-content">
+                                    <span class="card-tag">Landing Page</span>
+                                    <h2>Brasa Burger 99</h2>
+                                    <p>Focado em delivery e gastronomia artesanal com Dark mode premium.</p>
+                                    <a href="brasa-burger/index.html" class="btn-view-project">Explorar Site</a>
+                                </div>
+                            </div>
 
-                <!-- Video: Dark Biblical 2 -->
-                <div class="portfolio-card video-card dark-biblical-card" data-category="dark-biblical">
-                    <div class="card-img video-thumb"
-                        style="background-image: url('https://img.youtube.com/vi/ZlMKlWebvd4/maxresdefault.jpg');">
-                        <div class="play-overlay"><i class="fas fa-play"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <span class="card-tag">Storytelling Épico</span>
-                        <h2>FORMA DOS ANJOS</h2>
-                        <p>Visualização cinematográfica das descrições bíblicas mais assustadoras.</p>
-                        <button class="btn-watch-video" data-type="youtube" data-aspect="horizontal"
-                            data-video-src="ZlMKlWebvd4">Assistir Vídeo</button>
-                    </div>
-                </div>
+                            <!-- Lawyer -->
+                            <div class="portfolio-card" data-category="site">
+                                <div class="card-img" style="background-image: url('mendes-associados/hero.png');">
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-tag">Institucional</span>
+                                    <h2>Mendes & Associados</h2>
+                                    <p>Design sóbrio focado em autoridade para advocacia de elite.</p>
+                                    <a href="mendes-associados/index.html" class="btn-view-project">Explorar
+                                        Site</a>
+                                </div>
+                            </div>
 
-                <!-- Video: Dark Biblical 3 -->
-                <div class="portfolio-card video-card dark-biblical-card" data-category="dark-biblical">
-                    <div class="card-img video-thumb"
-                        style="background-image: url('https://img.youtube.com/vi/B2LdCPn6YpU/maxresdefault.jpg');">
-                        <div class="play-overlay"><i class="fas fa-play"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <span class="card-tag">Curiosidades Dark</span>
-                        <h2>O ANJO DO MASSACRE</h2>
-                        <p>Edição de alto impacto narrando eventos bíblicos de escala monumental.</p>
-                        <button class="btn-watch-video" data-type="youtube" data-aspect="horizontal"
-                            data-video-src="B2LdCPn6YpU">Assistir Vídeo</button>
-                    </div>
-                </div>
-                <!-- Burger -->
-                <div class="portfolio-card" data-category="site">
-                    <div class="card-img" style="background-image: url('brasa-burger/hero.png');"></div>
-                    <div class="card-content">
-                        <span class="card-tag">Landing Page</span>
-                        <h2>Brasa Burger 99</h2>
-                        <p>Focado em delivery e gastronomia artesanal com Dark mode premium.</p>
-                        <a href="brasa-burger/index.html" class="btn-view-project">Explorar Site</a>
-                    </div>
-                </div>
+                            <!-- Barber -->
+                            <div class="portfolio-card" data-category="site">
+                                <div class="card-img" style="background-image: url('navalha-club/hero.png');"></div>
+                                <div class="card-content">
+                                    <span class="card-tag">Agendamento</span>
+                                    <h2>Navalha Club</h2>
+                                    <p>Estilo industrial clássico otimizado para conversão de novos clientes.</p>
+                                    <a href="navalha-club/index.html" class="btn-view-project">Explorar Site</a>
+                                </div>
+                            </div>
 
-                <!-- Lawyer -->
-                <div class="portfolio-card" data-category="site">
-                    <div class="card-img" style="background-image: url('mendes-associados/hero.png');"></div>
-                    <div class="card-content">
-                        <span class="card-tag">Institucional</span>
-                        <h2>Mendes & Associados</h2>
-                        <p>Design sóbrio focado em autoridade para advocacia de elite.</p>
-                        <a href="mendes-associados/index.html" class="btn-view-project">Explorar Site</a>
-                    </div>
-                </div>
-
-                <!-- Barber -->
-                <div class="portfolio-card" data-category="site">
-                    <div class="card-img" style="background-image: url('navalha-club/hero.png');"></div>
-                    <div class="card-content">
-                        <span class="card-tag">Agendamento</span>
-                        <h2>Navalha Club</h2>
-                        <p>Estilo industrial clássico otimizado para conversão de novos clientes.</p>
-                        <a href="navalha-club/index.html" class="btn-view-project">Explorar Site</a>
-                    </div>
-                </div>
-
-                <!-- VSL Editor 360 -->
-                <div class="portfolio-card" data-category="site">
-                    <div class="card-img" style="background-image: url('vsl-thumb.png');"></div>
-                    <div class="card-content">
-                        <span class="card-tag">VSL / Sales Page</span>
-                        <h2>Editor 360°</h2>
-                        <p>Video Sales Letter premium para edição completa: Imagem, Movimento e Som.</p>
-                        <a href="../vsl-editor/index-minimal.html" class="btn-view-project">Explorar Site</a>
+                            <!-- VSL Editor 360 -->
+                            <div class="portfolio-card" data-category="site">
+                                <div class="card-img" style="background-image: url('vsl-thumb.png');"></div>
+                                <div class="card-content">
+                                    <span class="card-tag">VSL / Sales Page</span>
+                                    <h2>Editor 360°</h2>
+                                    <p>Video Sales Letter premium para edição completa: Imagem, Movimento e Som.</p>
+                                    <a href="../vsl-editor/index-minimal.html" class="btn-view-project">Explorar
+                                        Site</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1263,7 +1338,34 @@
                 closeBtn.click();
             }
         });
+
+        // ==========================================
+        // PORTFOLIO DRAWER TOGGLE (Inline for reliability)
+        // ==========================================
+        function toggleDrawer(header) {
+            const drawer = header.parentElement;
+            if (!drawer) return;
+
+            // Close all other drawers for a clean accordion effect
+            document.querySelectorAll('.portfolio-drawer').forEach(d => {
+                if (d !== drawer) d.classList.remove('active');
+            });
+
+            // Toggle current drawer
+            drawer.classList.toggle('active');
+
+            // Optional: Scroll to drawer after expansion
+            const isActive = drawer.classList.contains('active');
+            if (isActive) {
+                setTimeout(() => {
+                    const yOffset = -100;
+                    const y = drawer.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                    window.scrollTo({ top: y, behavior: 'smooth' });
+                }, 300);
+            }
+        }
     </script>
+    <script src="script.js"></script>
 </body>
 
 </html>

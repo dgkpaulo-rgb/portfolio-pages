@@ -1,7 +1,5 @@
 // Portfolio v3.0 - Enhanced Interactions
 
-console.log('🚀 Portfolio Loaded - Paulo Henrique');
-
 // ==========================================
 // SMOOTH REVEAL ON SCROLL
 // ==========================================
@@ -34,22 +32,24 @@ fadeInElements.forEach(el => {
 // ==========================================
 // NAVBAR SCROLL EFFECT
 // ==========================================
-const nav = document.querySelector('.nav');
+const nav = document.querySelector('nav'); // Fixed: was .nav
 let lastScroll = 0;
 
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
+if (nav) {
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
 
-    if (currentScroll > 100) {
-        nav.style.padding = '0.75rem 0';
-        nav.style.background = 'rgba(10, 10, 15, 0.95)';
-    } else {
-        nav.style.padding = '1.25rem 0';
-        nav.style.background = 'rgba(10, 10, 15, 0.8)';
-    }
+        if (currentScroll > 100) {
+            nav.style.padding = '0.75rem 0';
+            nav.style.background = 'rgba(10, 10, 15, 0.95)';
+        } else {
+            nav.style.padding = '1.25rem 0';
+            nav.style.background = 'rgba(10, 10, 15, 0.8)';
+        }
 
-    lastScroll = currentScroll;
-});
+        lastScroll = currentScroll;
+    });
+}
 
 // ==========================================
 // SMOOTH SCROLL FOR ANCHOR LINKS
@@ -133,49 +133,6 @@ if (hamburger) {
 }
 
 // ==========================================
-// CURSOR TRAIL EFFECT (OPTIONAL)
-// ==========================================
-const createCursorTrail = () => {
-    const trail = document.createElement('div');
-    trail.style.cssText = `
-        position: fixed;
-        width: 8px;
-        height: 8px;
-        background: linear-gradient(135deg, #8b5cf6, #3b82f6);
-        border-radius: 50%;
-        pointer-events: none;
-        opacity: 0;
-        z-index: 9999;
-        transition: opacity 0.3s;
-    `;
-    document.body.appendChild(trail);
-
-    let mouseX = 0, mouseY = 0;
-    let trailX = 0, trailY = 0;
-
-    document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-        trail.style.opacity = '0.6';
-    });
-
-    const animateTrail = () => {
-        trailX += (mouseX - trailX) * 0.15;
-        trailY += (mouseY - trailY) * 0.15;
-
-        trail.style.left = trailX + 'px';
-        trail.style.top = trailY + 'px';
-
-        requestAnimationFrame(animateTrail);
-    };
-
-    animateTrail();
-};
-
-// Uncomment to enable cursor trail
-// createCursorTrail();
-
-// ==========================================
 // WHATSAPP FORM SUBMISSION
 // ==========================================
 const budgetForm = document.querySelector('.budget-form');
@@ -185,11 +142,10 @@ if (budgetForm) {
         e.preventDefault();
 
         // Collect form data
-        const formData = new FormData(budgetForm);
-        const nome = budgetForm.querySelector('input[type="text"]').value;
-        const email = budgetForm.querySelector('input[type="email"]').value;
-        const projeto = budgetForm.querySelector('select').value;
-        const mensagem = budgetForm.querySelector('textarea').value;
+        const nome = budgetForm.querySelector('input[type="text"]')?.value || '';
+        const email = budgetForm.querySelector('input[type="email"]')?.value || '';
+        const projeto = budgetForm.querySelector('select')?.value || '';
+        const mensagem = budgetForm.querySelector('textarea')?.value || '';
 
         // Map project types to readable names
         const projectTypes = {
