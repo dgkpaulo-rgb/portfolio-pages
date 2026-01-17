@@ -176,6 +176,80 @@ if (budgetForm) {
     });
 }
 
+
+
+// ==========================================
+// SERVICES CAROUSEL LOGIC
+// ==========================================
+const track = document.querySelector('.carousel-track');
+const slides = Array.from(track?.children || []);
+const nextButton = document.querySelector('.carousel-control.next');
+const prevButton = document.querySelector('.carousel-control.prev');
+const dotsNav = document.querySelector('.carousel-dots');
+
+if (track && slides.length > 0) {
+    let currentSlideIndex = 0;
+
+    // Create dots
+    slides.forEach((_, index) => {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+        if (index === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => moveToSlide(index));
+        dotsNav.appendChild(dot);
+    });
+
+    const dots = Array.from(dotsNav.querySelectorAll('.dot'));
+
+    const updateControls = (index) => {
+        dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+    };
+
+    const moveToSlide = (index) => {
+        track.style.transform = `translateX(-${index * 100}%)`;
+        currentSlideIndex = index;
+        updateControls(index);
+    };
+
+    nextButton.addEventListener('click', () => {
+        currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+        moveToSlide(currentSlideIndex);
+    });
+
+    prevButton.addEventListener('click', () => {
+        currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
+        moveToSlide(currentSlideIndex);
+    });
+
+    // Auto-play
+    let autoPlayInterval = setInterval(() => {
+        currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+        moveToSlide(currentSlideIndex);
+    }, 5000);
+
+    // Stop auto-play on interaction
+    const stopAutoPlay = () => clearInterval(autoPlayInterval);
+    [nextButton, prevButton, dotsNav].forEach(el => el.addEventListener('click', stopAutoPlay));
+
+    // Touch support (Simple)
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    track.addEventListener('touchstart', e => {
+        touchStartX = e.changedTouches[0].screenX;
+        stopAutoPlay();
+    }, { passive: true });
+
+    track.addEventListener('touchend', e => {
+        touchEndX = e.changedTouches[0].screenX;
+        if (touchStartX - touchEndX > 50) {
+            nextButton.click();
+        } else if (touchEndX - touchStartX > 50) {
+            prevButton.click();
+        }
+    }, { passive: true });
+}
+
 // ==========================================
 // LOADING COMPLETE
 // ==========================================
